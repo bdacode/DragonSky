@@ -15,6 +15,9 @@ var s_btn_done_down = "img/btn-done-down.png";
 var s_btn_test_main = "img/btn-test-main.png";
 var s_btn_test_main_down = "img/btn-test-main-down.png";
 
+var s_dragon_00 = "game/dragon_00.png";
+var s_dragon_01 = "game/dragon_01.png";
+var s_dragon_02 = "game/dragon_02.png";
 
 var g_resources = [
     //image
@@ -27,7 +30,11 @@ var g_resources = [
     {src:s_btn_done},
     {src:s_btn_done_down},
     {src:s_btn_test_main},
-    {src:s_btn_test_main_down}
+    {src:s_btn_test_main_down},
+
+    {src:s_dragon_00},
+    {src:s_dragon_01},
+    {src:s_dragon_02}
     //plist
 
     //fnt

@@ -44,7 +44,8 @@ var DS = DS || {};
             'src/GameScene.js',
             'src/IntroScene.js',
             'src/Library.js',
-            'src/config/GameConfig.js'
+            'src/config/GameConfig.js',
+            'src/Flight.js'
         ]
     };
 

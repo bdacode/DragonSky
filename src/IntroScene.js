@@ -42,6 +42,9 @@ var IntroLayer = cc.Layer.extend({
     },
 
     onPressPlay:function(){
+        var scene = GameLayer.scene();
+        cc.Director.getInstance().replaceScene(scene);
+
 
     },
     onPressAbout:function(){
