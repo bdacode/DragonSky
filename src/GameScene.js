@@ -9,10 +9,15 @@
 
 
 var GameLayer = cc.Layer.extend({
+    _flight : null,
+
     init : function(){
+        this._flight = new Flight();
+        this._flight.setPosition(160,160);
+        this.addChild(this._flight,1);
 
+        return true;
     }
-
 });
 
 
