@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f92bff-acf3-4906-8f1d-a6317478be40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/originalArt/dragon" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/game/dragon_00.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/game/dragon_01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/game/dragon_02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Flight.js" afterPath="$PROJECT_DIR$/src/Flight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameScene.js" afterPath="$PROJECT_DIR$/src/GameScene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IntroScene.js" afterPath="$PROJECT_DIR$/src/IntroScene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cocos2d.js" afterPath="$PROJECT_DIR$/cocos2d.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resource.js" afterPath="$PROJECT_DIR$/src/resource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DragonSky.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="99f92bff-acf3-4906-8f1d-a6317478be40" time="1379317516336" ignored="false" />
+    <file path="/Dummy.txt" changelist="99f92bff-acf3-4906-8f1d-a6317478be40" time="1379330040044" ignored="false" />
     <file path="/main.js" changelist="99f92bff-acf3-4906-8f1d-a6317478be40" time="1379311327869" ignored="false" />
     <file path="/IntroScene.js" changelist="99f92bff-acf3-4906-8f1d-a6317478be40" time="1379322859607" ignored="false" />
     <file path="/resource.js" changelist="99f92bff-acf3-4906-8f1d-a6317478be40" time="1379317994414" ignored="false" />
@@ -47,7 +38,7 @@
       <file leaf-file-name="Flight.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Flight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="31" selection-start="576" selection-end="576" vertical-scroll-proportion="0.625">
+            <state line="24" column="67" selection-start="471" selection-end="471" vertical-scroll-proportion="0.53125">
               <folding />
             </state>
           </provider>
@@ -287,7 +278,11 @@
       <created>1379317522856</created>
       <updated>1379317522856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Flight">
+      <created>1379330059106</created>
+      <updated>1379330059106</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -476,7 +471,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Flight.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="31" selection-start="576" selection-end="576" vertical-scroll-proportion="0.625">
+        <state line="24" column="67" selection-start="471" selection-end="471" vertical-scroll-proportion="0.53125">
           <folding />
         </state>
       </provider>
