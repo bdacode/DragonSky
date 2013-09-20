@@ -6,8 +6,39 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var MainLayer = cc.Layer.extend({
+var BattleLayer = cc.Layer.extend({
+    _title : null,
 
+    init:function(){
+        this._title = cc.LabelTTF.create("전투","Daum",12);
+        this._title.setAnchorPoint(Anchor.TopLeft);
+        this._title.setPosition(0,screenHeight*0.9);
+        this.addChild(this._title);
+
+
+    }
+});
+
+var MainLayer = cc.LayerMultiplex.extend({
+    ctor:function(){
+        this._super();
+        var layer = new BattleLayer();
+        layer.init();
+        this.initWithLayers([layer]);
+    },
+
+    init : function(){
+        this._super();
+        this.initBackground();
+
+    },
+
+    /**
+     * 배경 그림 초기화
+     */
+    initBackground : function(){
+
+    }
 });
 
 
