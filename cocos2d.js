@@ -40,12 +40,13 @@ var DS = DS || {};
         engineDir:'../cocos2d/',
         //SingleEngineFile:'',
         appFiles:[
-            'src/resource.js',
-            'src/GameScene.js',
-            'src/IntroScene.js',
+            'src/Resource.js',
+            'src/Intro/IntroScene.js',
             'src/Library.js',
             'src/config/GameConfig.js',
-            'src/Flight.js'
+            'src/Game/GameLayer.js',
+            'src/Game/Ship.js',
+            'src/Main/MainScene.js'
         ]
     };
 

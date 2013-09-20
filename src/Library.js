@@ -1,8 +1,8 @@
 /**
  * Created with JetBrains WebStorm.
  * User: robert
- * Date: 9/16/13
- * Time: 2:44 PM
+ * Date: 9/17/13
+ * Time: 10:26 AM
  * To change this template use File | Settings | File Templates.
  */
 
@@ -18,6 +18,27 @@ Anchor.BottomLeft = new cc.Point(0, 0);
 Anchor.Left = new cc.Point(0, 0.5);
 Anchor.TopLeft = new cc.Point(0, 1);
 
+var s_rcVisible = cc.RectZero();
+var s_ptCenter = cc.PointZero();
+var s_ptTop = cc.PointZero();
+var s_ptTopRight = cc.PointZero();
+var s_ptRight = cc.PointZero();
+var s_ptBottomRight = cc.PointZero();
+var s_ptBottom = cc.PointZero();
+var s_ptLeft = cc.PointZero();
+var s_ptTopLeft = cc.PointZero();
+
+var collide = function (a, b) {
+    var pos1 = a.getPosition();
+    var pos2 = b.getPosition();
+    if (Math.abs(pos1.x - pos2.x) > MAX_CONTAINT_WIDTH || Math.abs(pos1.y - pos2.y) > MAX_CONTAINT_HEIGHT)
+        return false;
+
+    var aRect = a.collideRect(pos1);
+    var bRect = b.collideRect(pos2);
+    return cc.rectIntersectsRect(aRect, bRect);
+};
+
 cc.Node.prototype.Center = function(){
     var p = new cc.Point(this.getContentSize().width/2,this.getContentSize().height/2);
     return p;
@@ -28,6 +49,80 @@ cc.Point.prototype.add = function (x, y) {
     return p;
 };
 
+// 재정의
+cc.Menu.prototype.alignItemsInColumns =  function (/*Multiple Arguments*/) {
+    if((arguments.length > 0) && (arguments[arguments.length-1] == null))
+        cc.log("parameters should not be ending with null in Javascript");
+
+    var rows = [];
+    for (var i = 0; i < arguments.length; i++) {
+        rows.push(arguments[i]);
+    }
+    var height = -5;
+    var row = 0;
+    var rowHeight = 0;
+    var columnsOccupied = 0;
+    var rowColumns, tmp, len;
+    var locChildren = this._children;
+    if (locChildren && locChildren.length > 0) {
+        for (i = 0, len = locChildren.length; i < len; i++) {
+            cc.Assert(row < rows.length, "");
+
+            rowColumns = rows[row];
+            // can not have zero columns on a row
+            cc.Assert(rowColumns, "");
+
+            tmp = locChildren[i].getContentSize().height;
+            rowHeight = ((rowHeight >= tmp || isNaN(tmp)) ? rowHeight : tmp);
+
+            ++columnsOccupied;
+            if (columnsOccupied >= rowColumns) {
+                height += rowHeight + 5;
+
+                columnsOccupied = 0;
+                rowHeight = 0;
+                ++row;
+            }
+        }
+    }
+    // check if too many rows/columns for available menu items
+    cc.Assert(!columnsOccupied, "");
+    var winSize = cc.Director.getInstance().getVisibleSize();
+    var width = winSize.width*1.1; // 여백 설정
+
+    row = 0;
+    rowHeight = 0;
+    rowColumns = 0;
+    var w = 0.0;
+    var x = 0.0;
+    var y = (height / 2);
+
+    if (locChildren && locChildren.length > 0) {
+        for (i = 0, len = locChildren.length; i < len; i++) {
+            var child = locChildren[i];
+            if (rowColumns == 0) {
+                rowColumns = rows[row];
+                w = width/ (1 + rowColumns);
+                x = w;
+            }
+
+            tmp = child.getContentSize().height;
+            rowHeight = ((rowHeight >= tmp || isNaN(tmp)) ? rowHeight : tmp);
+            child.setPosition(x - width / 2, y - tmp / 2);
+
+            x += w;
+            ++columnsOccupied;
+
+            if (columnsOccupied >= rowColumns) {
+                y -= rowHeight + 3; // 세로여백
+                columnsOccupied = 0;
+                rowColumns = 0;
+                rowHeight = 0;
+                ++row;
+            }
+        }
+    }
+};
 
 /**
  * 랜덤 추출
