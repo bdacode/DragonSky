@@ -15,6 +15,9 @@
  *
  */
 
+
+var DS = DS || {};
+
 //game state
 DS.GAME_STATE = {
     HOME:0,
@@ -105,3 +108,14 @@ DS.BULLET_SPEED = {
 };
 // the counter of active enemies
 DS.ACTIVE_ENEMIES = 0;
+
+// navigation tag
+
+DS.NAV_TAG = {
+    BATTLE : 0,
+    BASE : 1,
+    EGG: 2,
+    SHOP : 3,
+    FRIEND : 4,
+    ETC : 5
+};

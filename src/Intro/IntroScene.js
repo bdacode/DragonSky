@@ -48,7 +48,7 @@ var IntroLayer = cc.Layer.extend({
 
     onPressPlay:function(){
         this.menu.setEnabled(false);
-        cc.Loader.preload(g_maingame, function () {
+        cc.Loader.preload(g_game, function () {
             var scene = GameLayer.scene();
             cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1.2, scene));
         }, this);
@@ -63,7 +63,7 @@ var IntroLayer = cc.Layer.extend({
     },
     onPressMain:function(){
         this.menu.setEnabled(false);
-        cc.Loader.preload(g_mainscene, function () {
+        cc.Loader.preload(g_main, function () {
             var scene = MainScene.create();
             cc.Director.getInstance().replaceScene(cc.TransitionFade.create(1.2, scene));
         }, this);

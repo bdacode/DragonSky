@@ -25,7 +25,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var DS = DS || {};
+
 
 (function () {
     var d = document;
@@ -46,7 +46,18 @@ var DS = DS || {};
             'src/config/GameConfig.js',
             'src/Game/GameLayer.js',
             'src/Game/Ship.js',
-            'src/Main/MainScene.js'
+            'src/Main/MainScene.js',
+
+            'src/Main/ShopMenu.js',
+            'src/Main/ExtraMenu.js',
+            'src/Main/FriendMenu.js',
+            'src/Main/EggMenu.js',
+            'src/Main/Component.js',
+            'src/Main/Battle/BattleMenu.js',
+            'src/Main/Battle/NormalMenu.js',
+
+            'src/Main/Base/BaseMenu.js',
+
         ]
     };
 

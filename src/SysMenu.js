@@ -61,7 +61,7 @@ var SysMenu = cc.Layer.extend({
     },
     onNewGame:function (pSender) {
         //load resources
-        cc.Loader.preload(g_maingame, function () {
+        cc.Loader.preload(g_game, function () {
             var scene = cc.Scene.create();
             scene.addChild(GameLayer.create());
             scene.addChild(GameControlMenu.create());

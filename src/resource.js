@@ -1,5 +1,8 @@
 var dirImg = "Moon/";
 var dirMusic = "res/Music/";
+// font
+
+var f_daum = "Daum";
 
 //image
 var s_loading = dirImg + "loading.png";
@@ -58,10 +61,41 @@ var s_btn_done_down = "img/btn-done-down.png";
 var s_btn_test_main = "img/btn-test-main.png";
 var s_btn_test_main_down = "img/btn-test-main-down.png";
 
+// Main
+var s_main_bg = "main/main_bg.png";
+var s_title_bg = "main/title_bg.png";
+var s_nav_box_normal = "main/BoxN.png";
+var s_nav_box_selected = "main/BoxS.png";
+var s_nav_clock_normal = "main/ClockN.png";
+var s_nav_clock_selected = "main/ClockS.png";
+var s_nav_door_normal = "main/DoorN.png";
+var s_nav_door_selected = "main/DoorS.png";
+var s_nav_human_normal = "main/HumanN.png";
+var s_nav_human_selected = "main/HumanS.png";
+var s_nav_mail_normal = "main/MailN.png";
+var s_nav_mail_selected = "main/MailS.png";
+var s_frame_normal = "main/frame_normal.png";
+var s_frame_select = "main/frame_select.png";
 
-var g_mainscene = [
+
+var g_main = [
+    {src:s_main_bg},
+    {src:s_title_bg},
+    {src:s_nav_box_normal},
+    {src:s_nav_box_selected},
+    {src:s_nav_clock_normal},
+    {src:s_nav_clock_selected},
+    {src:s_nav_door_normal},
+    {src:s_nav_door_selected},
+    {src:s_nav_human_normal},
+    {src:s_nav_human_selected},
+    {src:s_nav_mail_normal},
+    {src:s_nav_mail_selected},
+    {src:s_frame_normal},
+    {src:s_frame_select}
 
 ];
+
 var g_intro  = [
     {src:s_game_bg},
     {src:s_btn_about},
@@ -76,19 +110,7 @@ var g_intro  = [
 ];
 
 
-var g_mainmenu = [
-    {src:s_loading},
-    {src:s_flare},
-    {src:s_menu},
-    {src:s_logo},
-    {src:s_flare},
-	{src:s_mainMainMusic_mp3},
-    {src:s_mainMainMusic_ogg},
-    {src:s_menuTitle}
-
-];
-
-var g_maingame = [
+var g_game = [
     //image
 
     {src:s_cocos2dhtml5},
